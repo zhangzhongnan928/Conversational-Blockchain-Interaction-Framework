@@ -27,8 +27,6 @@ This framework enables users to initiate potentially complex blockchain transact
 
 ### 1.4. High-Level Architecture
 
-```mermaid
-graph LR
     User -- Interacts --> AppC[Application C (Chatbot / MCP Client)];
     AppC -- 1. Call MCP Tool --> ServerA[Server A (Tx Builder / MCP Server / API)];
     ServerA -- 2. Return Signing URL --> AppC;
@@ -44,6 +42,7 @@ graph LR
     ServerA -- 12. Send Notification (Webhook) --> AppCBackend(App C Backend);
     AppCBackend -- 13. Update UI --> AppC;
     AppC -- 14. Show Final Status --> User;
+
 
     style Wallet fill:#f9f,stroke:#333,stroke-width:2px;
     style Blockchain fill:#ccf,stroke:#333,stroke-width:2px;
@@ -143,7 +142,6 @@ This outlines the typical journey for a user interacting with the framework:
 
 ## 4. Technical Workflow (Sequence Diagram)
 
-```mermaid
 sequenceDiagram
     participant User
     participant AppC_UI [App C UI (e.g., Claude Desktop)]
